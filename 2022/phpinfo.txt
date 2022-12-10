@@ -1,0 +1,621 @@
+phpinfo()
+PHP Version => 8.1.13
+
+System => Windows NT JAY-PC 10.0 build 19044 (Windows 10) AMD64
+Build Date => Nov 22 2022 15:41:16
+Build System => Microsoft Windows Server 2019 Datacenter [10.0.17763]
+Compiler => Visual C++ 2019
+Architecture => x64
+Configure Command => cscript /nologo /e:jscript configure.js  "--enable-snapshot-build" "--enable-debug-pack" "--disable-zts" "--with-pdo-oci=..\..\..\..\instantclient\sdk,shared" "--with-oci8-19=..\..\..\..\instantclient\sdk,shared" "--enable-object-out-dir=../obj/" "--enable-com-dotnet=shared" "--without-analyzer" "--with-pgo"
+Server API => Command Line Interface
+Virtual Directory Support => disabled
+Configuration File (php.ini) Path =>  
+Loaded Configuration File => (none)
+Scan this dir for additional .ini files => (none)
+Additional .ini files parsed => (none)
+PHP API => 20210902
+PHP Extension => 20210902
+Zend Extension => 420210902
+Zend Extension Build => API420210902,NTS,VS16
+PHP Extension Build => API20210902,NTS,VS16
+Debug Build => no
+Thread Safety => disabled
+Zend Signal Handling => disabled
+Zend Memory Manager => enabled
+Zend Multibyte Support => disabled
+IPv6 Support => enabled
+DTrace Support => disabled
+
+Registered PHP Streams => php, file, glob, data, http, ftp, zip, compress.zlib, phar
+Registered Stream Socket Transports => tcp, udp
+Registered Stream Filters => convert.iconv.*, string.rot13, string.toupper, string.tolower, convert.*, consumed, dechunk, zlib.*
+
+This program makes use of the Zend Scripting Language Engine:
+Zend Engine v4.1.13, Copyright (c) Zend Technologies
+
+
+ _______________________________________________________________________
+
+
+Configuration
+
+bcmath
+
+BCMath support => enabled
+
+Directive => Local Value => Master Value
+bcmath.scale => 0 => 0
+
+calendar
+
+Calendar support => enabled
+
+Core
+
+PHP Version => 8.1.13
+
+Directive => Local Value => Master Value
+allow_url_fopen => On => On
+allow_url_include => Off => Off
+arg_separator.input => & => &
+arg_separator.output => & => &
+auto_append_file => no value => no value
+auto_globals_jit => On => On
+auto_prepend_file => no value => no value
+browscap => no value => no value
+default_charset => UTF-8 => UTF-8
+default_mimetype => text/html => text/html
+disable_classes => no value => no value
+disable_functions => no value => no value
+display_errors => STDOUT => STDOUT
+display_startup_errors => On => On
+doc_root => no value => no value
+docref_ext => no value => no value
+docref_root => no value => no value
+enable_dl => On => On
+enable_post_data_reading => On => On
+error_append_string => no value => no value
+error_log => no value => no value
+error_prepend_string => no value => no value
+error_reporting => no value => no value
+expose_php => On => On
+extension_dir => C:\php\ext => C:\php\ext
+fiber.stack_size => no value => no value
+file_uploads => On => On
+hard_timeout => 2 => 2
+highlight.comment => <font style="color: #FF8000">#FF8000</font> => <font style="color: #FF8000">#FF8000</font>
+highlight.default => <font style="color: #0000BB">#0000BB</font> => <font style="color: #0000BB">#0000BB</font>
+highlight.html => <font style="color: #000000">#000000</font> => <font style="color: #000000">#000000</font>
+highlight.keyword => <font style="color: #007700">#007700</font> => <font style="color: #007700">#007700</font>
+highlight.string => <font style="color: #DD0000">#DD0000</font> => <font style="color: #DD0000">#DD0000</font>
+html_errors => Off => Off
+ignore_repeated_errors => Off => Off
+ignore_repeated_source => Off => Off
+ignore_user_abort => Off => Off
+implicit_flush => On => On
+include_path => .;C:\php\pear => .;C:\php\pear
+input_encoding => no value => no value
+internal_encoding => no value => no value
+log_errors => Off => Off
+mail.add_x_header => Off => Off
+mail.force_extra_parameters => no value => no value
+mail.log => no value => no value
+max_execution_time => 0 => 0
+max_file_uploads => 20 => 20
+max_input_nesting_level => 64 => 64
+max_input_time => -1 => -1
+max_input_vars => 1000 => 1000
+memory_limit => 128M => 128M
+open_basedir => no value => no value
+output_buffering => 0 => 0
+output_encoding => no value => no value
+output_handler => no value => no value
+post_max_size => 8M => 8M
+precision => 14 => 14
+realpath_cache_size => 4096K => 4096K
+realpath_cache_ttl => 120 => 120
+register_argc_argv => On => On
+report_memleaks => On => On
+report_zend_debug => Off => Off
+request_order => no value => no value
+sendmail_from => no value => no value
+sendmail_path => no value => no value
+serialize_precision => -1 => -1
+short_open_tag => On => On
+SMTP => localhost => localhost
+smtp_port => 25 => 25
+sys_temp_dir => no value => no value
+syslog.facility => LOG_USER => LOG_USER
+syslog.filter => no-ctrl => no-ctrl
+syslog.ident => php => php
+unserialize_callback_func => no value => no value
+upload_max_filesize => 2M => 2M
+upload_tmp_dir => no value => no value
+user_dir => no value => no value
+user_ini.cache_ttl => 300 => 300
+user_ini.filename => .user.ini => .user.ini
+variables_order => EGPCS => EGPCS
+windows.show_crt_warning => Off => Off
+xmlrpc_error_number => 0 => 0
+xmlrpc_errors => Off => Off
+zend.assertions => 1 => 1
+zend.detect_unicode => On => On
+zend.enable_gc => On => On
+zend.exception_ignore_args => Off => Off
+zend.exception_string_param_max_len => 15 => 15
+zend.multibyte => Off => Off
+zend.script_encoding => no value => no value
+
+ctype
+
+ctype functions => enabled
+
+date
+
+date/time support => enabled
+timelib version => 2021.17
+"Olson" Timezone Database Version => 2022.6
+Timezone Database => internal
+Default timezone => UTC
+
+Directive => Local Value => Master Value
+date.default_latitude => 31.7667 => 31.7667
+date.default_longitude => 35.2333 => 35.2333
+date.sunrise_zenith => 90.833333 => 90.833333
+date.sunset_zenith => 90.833333 => 90.833333
+date.timezone => no value => no value
+
+dom
+
+DOM/XML => enabled
+DOM/XML API Version => 20031129
+libxml Version => 2.9.12
+HTML Support => enabled
+XPath Support => enabled
+XPointer Support => enabled
+Schema Support => enabled
+RelaxNG Support => enabled
+
+filter
+
+Input Validation and Filtering => enabled
+
+Directive => Local Value => Master Value
+filter.default => unsafe_raw => unsafe_raw
+filter.default_flags => no value => no value
+
+hash
+
+hash support => enabled
+Hashing Engines => md2 md4 md5 sha1 sha224 sha256 sha384 sha512/224 sha512/256 sha512 sha3-224 sha3-256 sha3-384 sha3-512 ripemd128 ripemd160 ripemd256 ripemd320 whirlpool tiger128,3 tiger160,3 tiger192,3 tiger128,4 tiger160,4 tiger192,4 snefru snefru256 gost gost-crypto adler32 crc32 crc32b crc32c fnv132 fnv1a32 fnv164 fnv1a64 joaat murmur3a murmur3c murmur3f xxh32 xxh64 xxh3 xxh128 haval128,3 haval160,3 haval192,3 haval224,3 haval256,3 haval128,4 haval160,4 haval192,4 haval224,4 haval256,4 haval128,5 haval160,5 haval192,5 haval224,5 haval256,5 
+
+MHASH support => Enabled
+MHASH API Version => Emulated Support
+
+iconv
+
+iconv support => enabled
+iconv implementation => "libiconv"
+iconv library version => 1.16
+
+Directive => Local Value => Master Value
+iconv.input_encoding => no value => no value
+iconv.internal_encoding => no value => no value
+iconv.output_encoding => no value => no value
+
+json
+
+json support => enabled
+
+libxml
+
+libXML support => active
+libXML Compiled Version => 2.9.12
+libXML Loaded Version => 20912
+libXML streams => enabled
+
+mysqlnd
+
+mysqlnd => enabled
+Version => mysqlnd 8.1.13
+Compression => supported
+core SSL => supported
+extended SSL => supported
+Command buffer size => 4096
+Read buffer size => 32768
+Read timeout => 86400
+Collecting statistics => Yes
+Collecting memory statistics => No
+Tracing => n/a
+Loaded plugins => mysqlnd,debug_trace,auth_plugin_mysql_native_password,auth_plugin_mysql_clear_password,auth_plugin_caching_sha2_password,auth_plugin_sha256_password
+API Extensions =>  
+
+pcre
+
+PCRE (Perl Compatible Regular Expressions) Support => enabled
+PCRE Library Version => 10.39 2021-10-29
+PCRE Unicode Version => 14.0.0
+PCRE JIT Support => enabled
+PCRE JIT Target => x86 64bit (little endian + unaligned)
+
+Directive => Local Value => Master Value
+pcre.backtrack_limit => 1000000 => 1000000
+pcre.jit => 1 => 1
+pcre.recursion_limit => 100000 => 100000
+
+PDO
+
+PDO support => enabled
+PDO drivers =>  
+
+Phar
+
+Phar: PHP Archive support => enabled
+Phar API version => 1.1.1
+Phar-based phar archives => enabled
+Tar-based phar archives => enabled
+ZIP-based phar archives => enabled
+gzip compression => enabled
+bzip2 compression => disabled (install ext/bz2)
+OpenSSL support => disabled (install ext/openssl)
+
+
+Phar based on pear/PHP_Archive, original concept by Davey Shafik.
+Phar fully realized by Gregory Beaver and Marcus Boerger.
+Portions of tar implementation Copyright (c) 2003-2009 Tim Kientzle.
+Directive => Local Value => Master Value
+phar.cache_list => no value => no value
+phar.readonly => On => On
+phar.require_hash => On => On
+
+readline
+
+Readline Support => enabled
+Readline library => WinEditLine
+
+Directive => Local Value => Master Value
+cli.pager => no value => no value
+cli.prompt => \b \>  => \b \> 
+
+Reflection
+
+Reflection => enabled
+
+session
+
+Session Support => enabled
+Registered save handlers => files user 
+Registered serializer handlers => php_serialize php php_binary 
+
+Directive => Local Value => Master Value
+session.auto_start => Off => Off
+session.cache_expire => 180 => 180
+session.cache_limiter => nocache => nocache
+session.cookie_domain => no value => no value
+session.cookie_httponly => 0 => 0
+session.cookie_lifetime => 0 => 0
+session.cookie_path => / => /
+session.cookie_samesite => no value => no value
+session.cookie_secure => 0 => 0
+session.gc_divisor => 100 => 100
+session.gc_maxlifetime => 1440 => 1440
+session.gc_probability => 1 => 1
+session.lazy_write => On => On
+session.name => PHPSESSID => PHPSESSID
+session.referer_check => no value => no value
+session.save_handler => files => files
+session.save_path => no value => no value
+session.serialize_handler => php => php
+session.sid_bits_per_character => 4 => 4
+session.sid_length => 32 => 32
+session.upload_progress.cleanup => On => On
+session.upload_progress.enabled => On => On
+session.upload_progress.freq => 1% => 1%
+session.upload_progress.min_freq => 1 => 1
+session.upload_progress.name => PHP_SESSION_UPLOAD_PROGRESS => PHP_SESSION_UPLOAD_PROGRESS
+session.upload_progress.prefix => upload_progress_ => upload_progress_
+session.use_cookies => 1 => 1
+session.use_only_cookies => 1 => 1
+session.use_strict_mode => 0 => 0
+session.use_trans_sid => 0 => 0
+
+SimpleXML
+
+SimpleXML support => enabled
+Schema support => enabled
+
+SPL
+
+SPL support => enabled
+Interfaces => OuterIterator, RecursiveIterator, SeekableIterator, SplObserver, SplSubject
+Classes => AppendIterator, ArrayIterator, ArrayObject, BadFunctionCallException, BadMethodCallException, CachingIterator, CallbackFilterIterator, DirectoryIterator, DomainException, EmptyIterator, FilesystemIterator, FilterIterator, GlobIterator, InfiniteIterator, InvalidArgumentException, IteratorIterator, LengthException, LimitIterator, LogicException, MultipleIterator, NoRewindIterator, OutOfBoundsException, OutOfRangeException, OverflowException, ParentIterator, RangeException, RecursiveArrayIterator, RecursiveCachingIterator, RecursiveCallbackFilterIterator, RecursiveDirectoryIterator, RecursiveFilterIterator, RecursiveIteratorIterator, RecursiveRegexIterator, RecursiveTreeIterator, RegexIterator, RuntimeException, SplDoublyLinkedList, SplFileInfo, SplFileObject, SplFixedArray, SplHeap, SplMinHeap, SplMaxHeap, SplObjectStorage, SplPriorityQueue, SplQueue, SplStack, SplTempFileObject, UnderflowException, UnexpectedValueException
+
+standard
+
+Dynamic Library Support => enabled
+Internal Sendmail Support for Windows => enabled
+
+Directive => Local Value => Master Value
+assert.active => On => On
+assert.bail => Off => Off
+assert.callback => no value => no value
+assert.exception => On => On
+assert.warning => On => On
+auto_detect_line_endings => Off => Off
+default_socket_timeout => 60 => 60
+from => no value => no value
+session.trans_sid_hosts => no value => no value
+session.trans_sid_tags => a=href,area=href,frame=src,form= => a=href,area=href,frame=src,form=
+unserialize_max_depth => 4096 => 4096
+url_rewriter.hosts => no value => no value
+url_rewriter.tags => form= => form=
+user_agent => no value => no value
+
+tokenizer
+
+Tokenizer Support => enabled
+
+xml
+
+XML Support => active
+XML Namespace Support => active
+libxml2 Version => 2.9.12
+
+xmlreader
+
+XMLReader => enabled
+
+xmlwriter
+
+XMLWriter => enabled
+
+zip
+
+Zip => enabled
+Zip version => 1.19.5
+Libzip version => 1.7.1
+BZIP2 compression => Yes
+XZ compression => Yes
+ZSTD compression => No
+AES-128 encryption => Yes
+AES-192 encryption => Yes
+AES-256 encryption => Yes
+
+zlib
+
+ZLib Support => enabled
+Stream Wrapper => compress.zlib://
+Stream Filter => zlib.inflate, zlib.deflate
+Compiled Version => 1.2.12
+Linked Version => 1.2.12
+
+Directive => Local Value => Master Value
+zlib.output_compression => Off => Off
+zlib.output_compression_level => -1 => -1
+zlib.output_handler => no value => no value
+
+Additional Modules
+
+Module Name
+
+Environment
+
+Variable => Value
+ALLUSERSPROFILE => C:\ProgramData
+APPDATA => C:\Users\magic\AppData\Roaming
+CHROME_CRASHPAD_PIPE_NAME => \\.\pipe\LOCAL\crashpad_20756_KCJIEQQINDWWJGOS
+COLORTERM => truecolor
+COMMONPROGRAMFILES => C:\Program Files\Common Files
+COMPUTERNAME => JAY-PC
+COMSPEC => C:\WINDOWS\system32\cmd.exe
+CommonProgramFiles(x86) => C:\Program Files (x86)\Common Files
+CommonProgramW6432 => C:\Program Files\Common Files
+DriverData => C:\Windows\System32\Drivers\DriverData
+EXEPATH => C:\Program Files\Git\bin
+GIT_ASKPASS => c:\Users\magic\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh
+HOME => C:\Users\magic
+HOMEDRIVE => C:
+HOMEPATH => \Users\magic
+LANG => en_US.UTF-8
+LOCALAPPDATA => C:\Users\magic\AppData\Local
+LOGONSERVER => \\JAY-PC
+MSYSTEM => MINGW64
+NUMBER_OF_PROCESSORS => 20
+ORIGINAL_XDG_CURRENT_DESKTOP => undefined
+OS => Windows_NT
+OculusBase => C:\Program Files\Oculus\
+OneDrive => C:\Users\magic\OneDrive
+OneDriveConsumer => C:\Users\magic\OneDrive
+PATH => C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\magic\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Oculus\Support\oculus-runtime;C:\program files\docker\docker\resources\bin;C:\programdata\oracle\java\javapath;C:\program files (x86)\razer chroma sdk\bin;C:\program files\razer chroma sdk\bin;C:\windows\system32;C:\windows;C:\windows\system32\wbem;C:\windows\system32\windowspowershell\v1.0;C:\windows\system32\config\systemprofile\appdata\local\microsoft\windowsapps;C:\program files\git\cmd;C:\program files\putty;C:\wamp64\bin\php\php7.0.10;C:\programdata\composersetup\bin;C:\windows\system32\openssh;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Users\magic\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\magic\AppData\Local\Programs\Python\Python37-32;C:\Users\magic\AppData\Local\Microsoft\WindowsApps;C:\Users\magic\AppData\Roaming\Composer\vendor\bin;C:\Users\magic\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\magic\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\AOMEI\AOMEI Backupper\6.9.1;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\nodejs;C:\Users\magic\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\magic\AppData\Local\Programs\Python\Python37-32;C:\Users\magic\AppData\Local\Microsoft\WindowsApps;C:\Users\magic\AppData\Roaming\Composer\vendor\bin;C:\Users\magic\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin;C:\Users\magic\AppData\Roaming\npm;C:\php
+PATHEXT => .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PLINK_PROTOCOL => ssh
+PROCESSOR_ARCHITECTURE => AMD64
+PROCESSOR_IDENTIFIER => Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
+PROCESSOR_LEVEL => 6
+PROCESSOR_REVISION => 9702
+PROGRAMFILES => C:\Program Files
+PS1 => \[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ 
+PSModulePath => C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC => C:\Users\Public
+PWD => C:/Users/magic/Code/Advent/2022
+ProgramData => C:\ProgramData
+ProgramFiles(x86) => C:\Program Files (x86)
+ProgramW6432 => C:\Program Files
+SESSIONNAME => Console
+SHLVL => 1
+SYSTEMDRIVE => C:
+SYSTEMROOT => C:\WINDOWS
+TEMP => C:\Users\magic\AppData\Local\Temp
+TERM => cygwin
+TERM_PROGRAM => vscode
+TERM_PROGRAM_VERSION => 1.74.0
+TMP => C:\Users\magic\AppData\Local\Temp
+USERDOMAIN => JAY-PC
+USERDOMAIN_ROAMINGPROFILE => JAY-PC
+USERNAME => magic
+USERPROFILE => C:\Users\magic
+VBOX_MSI_INSTALL_PATH => C:\Program Files\Oracle\VirtualBox\
+VSCODE_GIT_ASKPASS_EXTRA_ARGS => --ms-enable-electron-run-as-node
+VSCODE_GIT_ASKPASS_MAIN => c:\Users\magic\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js
+VSCODE_GIT_ASKPASS_NODE => C:\Users\magic\AppData\Local\Programs\Microsoft VS Code\Code.exe
+VSCODE_GIT_IPC_HANDLE => \\.\pipe\vscode-git-d2154b9827-sock
+WINDIR => C:\WINDOWS
+ZES_ENABLE_SYSMAN => 1
+_ => C:/php/php
+__COMPAT_LAYER => DetectorsAppHealth
+__PSLockDownPolicy => 0
+asl.log => Destination=file
+
+PHP Variables
+
+Variable => Value
+$_SERVER['ALLUSERSPROFILE'] => C:\ProgramData
+$_SERVER['APPDATA'] => C:\Users\magic\AppData\Roaming
+$_SERVER['CHROME_CRASHPAD_PIPE_NAME'] => \\.\pipe\LOCAL\crashpad_20756_KCJIEQQINDWWJGOS
+$_SERVER['COLORTERM'] => truecolor
+$_SERVER['COMMONPROGRAMFILES'] => C:\Program Files\Common Files
+$_SERVER['COMPUTERNAME'] => JAY-PC
+$_SERVER['COMSPEC'] => C:\WINDOWS\system32\cmd.exe
+$_SERVER['CommonProgramFiles(x86)'] => C:\Program Files (x86)\Common Files
+$_SERVER['CommonProgramW6432'] => C:\Program Files\Common Files
+$_SERVER['DriverData'] => C:\Windows\System32\Drivers\DriverData
+$_SERVER['EXEPATH'] => C:\Program Files\Git\bin
+$_SERVER['GIT_ASKPASS'] => c:\Users\magic\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh
+$_SERVER['HOME'] => C:\Users\magic
+$_SERVER['HOMEDRIVE'] => C:
+$_SERVER['HOMEPATH'] => \Users\magic
+$_SERVER['LANG'] => en_US.UTF-8
+$_SERVER['LOCALAPPDATA'] => C:\Users\magic\AppData\Local
+$_SERVER['LOGONSERVER'] => \\JAY-PC
+$_SERVER['MSYSTEM'] => MINGW64
+$_SERVER['NUMBER_OF_PROCESSORS'] => 20
+$_SERVER['ORIGINAL_XDG_CURRENT_DESKTOP'] => undefined
+$_SERVER['OS'] => Windows_NT
+$_SERVER['OculusBase'] => C:\Program Files\Oculus\
+$_SERVER['OneDrive'] => C:\Users\magic\OneDrive
+$_SERVER['OneDriveConsumer'] => C:\Users\magic\OneDrive
+$_SERVER['PATH'] => C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\magic\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Oculus\Support\oculus-runtime;C:\program files\docker\docker\resources\bin;C:\programdata\oracle\java\javapath;C:\program files (x86)\razer chroma sdk\bin;C:\program files\razer chroma sdk\bin;C:\windows\system32;C:\windows;C:\windows\system32\wbem;C:\windows\system32\windowspowershell\v1.0;C:\windows\system32\config\systemprofile\appdata\local\microsoft\windowsapps;C:\program files\git\cmd;C:\program files\putty;C:\wamp64\bin\php\php7.0.10;C:\programdata\composersetup\bin;C:\windows\system32\openssh;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Users\magic\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\magic\AppData\Local\Programs\Python\Python37-32;C:\Users\magic\AppData\Local\Microsoft\WindowsApps;C:\Users\magic\AppData\Roaming\Composer\vendor\bin;C:\Users\magic\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\magic\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\AOMEI\AOMEI Backupper\6.9.1;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\nodejs;C:\Users\magic\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\magic\AppData\Local\Programs\Python\Python37-32;C:\Users\magic\AppData\Local\Microsoft\WindowsApps;C:\Users\magic\AppData\Roaming\Composer\vendor\bin;C:\Users\magic\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin;C:\Users\magic\AppData\Roaming\npm;C:\php
+$_SERVER['PATHEXT'] => .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+$_SERVER['PLINK_PROTOCOL'] => ssh
+$_SERVER['PROCESSOR_ARCHITECTURE'] => AMD64
+$_SERVER['PROCESSOR_IDENTIFIER'] => Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
+$_SERVER['PROCESSOR_LEVEL'] => 6
+$_SERVER['PROCESSOR_REVISION'] => 9702
+$_SERVER['PROGRAMFILES'] => C:\Program Files
+$_SERVER['PS1'] => \[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ 
+$_SERVER['PSModulePath'] => C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+$_SERVER['PUBLIC'] => C:\Users\Public
+$_SERVER['PWD'] => C:/Users/magic/Code/Advent/2022
+$_SERVER['ProgramData'] => C:\ProgramData
+$_SERVER['ProgramFiles(x86)'] => C:\Program Files (x86)
+$_SERVER['ProgramW6432'] => C:\Program Files
+$_SERVER['SESSIONNAME'] => Console
+$_SERVER['SHLVL'] => 1
+$_SERVER['SYSTEMDRIVE'] => C:
+$_SERVER['SYSTEMROOT'] => C:\WINDOWS
+$_SERVER['TEMP'] => C:\Users\magic\AppData\Local\Temp
+$_SERVER['TERM'] => cygwin
+$_SERVER['TERM_PROGRAM'] => vscode
+$_SERVER['TERM_PROGRAM_VERSION'] => 1.74.0
+$_SERVER['TMP'] => C:\Users\magic\AppData\Local\Temp
+$_SERVER['USERDOMAIN'] => JAY-PC
+$_SERVER['USERDOMAIN_ROAMINGPROFILE'] => JAY-PC
+$_SERVER['USERNAME'] => magic
+$_SERVER['USERPROFILE'] => C:\Users\magic
+$_SERVER['VBOX_MSI_INSTALL_PATH'] => C:\Program Files\Oracle\VirtualBox\
+$_SERVER['VSCODE_GIT_ASKPASS_EXTRA_ARGS'] => --ms-enable-electron-run-as-node
+$_SERVER['VSCODE_GIT_ASKPASS_MAIN'] => c:\Users\magic\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js
+$_SERVER['VSCODE_GIT_ASKPASS_NODE'] => C:\Users\magic\AppData\Local\Programs\Microsoft VS Code\Code.exe
+$_SERVER['VSCODE_GIT_IPC_HANDLE'] => \\.\pipe\vscode-git-d2154b9827-sock
+$_SERVER['WINDIR'] => C:\WINDOWS
+$_SERVER['ZES_ENABLE_SYSMAN'] => 1
+$_SERVER['_'] => C:/php/php
+$_SERVER['__COMPAT_LAYER'] => DetectorsAppHealth
+$_SERVER['__PSLockDownPolicy'] => 0
+$_SERVER['PHP_SELF'] => 
+$_SERVER['SCRIPT_NAME'] => 
+$_SERVER['SCRIPT_FILENAME'] => 
+$_SERVER['PATH_TRANSLATED'] => 
+$_SERVER['DOCUMENT_ROOT'] => 
+$_SERVER['REQUEST_TIME_FLOAT'] => 1670479831.0033
+$_SERVER['REQUEST_TIME'] => 1670479831
+$_SERVER['argv'] => Array
+(
+)
+
+$_SERVER['argc'] => 0
+$_ENV['ALLUSERSPROFILE'] => C:\ProgramData
+$_ENV['APPDATA'] => C:\Users\magic\AppData\Roaming
+$_ENV['CHROME_CRASHPAD_PIPE_NAME'] => \\.\pipe\LOCAL\crashpad_20756_KCJIEQQINDWWJGOS
+$_ENV['COLORTERM'] => truecolor
+$_ENV['COMMONPROGRAMFILES'] => C:\Program Files\Common Files
+$_ENV['COMPUTERNAME'] => JAY-PC
+$_ENV['COMSPEC'] => C:\WINDOWS\system32\cmd.exe
+$_ENV['CommonProgramFiles(x86)'] => C:\Program Files (x86)\Common Files
+$_ENV['CommonProgramW6432'] => C:\Program Files\Common Files
+$_ENV['DriverData'] => C:\Windows\System32\Drivers\DriverData
+$_ENV['EXEPATH'] => C:\Program Files\Git\bin
+$_ENV['GIT_ASKPASS'] => c:\Users\magic\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh
+$_ENV['HOME'] => C:\Users\magic
+$_ENV['HOMEDRIVE'] => C:
+$_ENV['HOMEPATH'] => \Users\magic
+$_ENV['LANG'] => en_US.UTF-8
+$_ENV['LOCALAPPDATA'] => C:\Users\magic\AppData\Local
+$_ENV['LOGONSERVER'] => \\JAY-PC
+$_ENV['MSYSTEM'] => MINGW64
+$_ENV['NUMBER_OF_PROCESSORS'] => 20
+$_ENV['ORIGINAL_XDG_CURRENT_DESKTOP'] => undefined
+$_ENV['OS'] => Windows_NT
+$_ENV['OculusBase'] => C:\Program Files\Oculus\
+$_ENV['OneDrive'] => C:\Users\magic\OneDrive
+$_ENV['OneDriveConsumer'] => C:\Users\magic\OneDrive
+$_ENV['PATH'] => C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\magic\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Oculus\Support\oculus-runtime;C:\program files\docker\docker\resources\bin;C:\programdata\oracle\java\javapath;C:\program files (x86)\razer chroma sdk\bin;C:\program files\razer chroma sdk\bin;C:\windows\system32;C:\windows;C:\windows\system32\wbem;C:\windows\system32\windowspowershell\v1.0;C:\windows\system32\config\systemprofile\appdata\local\microsoft\windowsapps;C:\program files\git\cmd;C:\program files\putty;C:\wamp64\bin\php\php7.0.10;C:\programdata\composersetup\bin;C:\windows\system32\openssh;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Users\magic\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\magic\AppData\Local\Programs\Python\Python37-32;C:\Users\magic\AppData\Local\Microsoft\WindowsApps;C:\Users\magic\AppData\Roaming\Composer\vendor\bin;C:\Users\magic\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\magic\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\AOMEI\AOMEI Backupper\6.9.1;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\nodejs;C:\Users\magic\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\magic\AppData\Local\Programs\Python\Python37-32;C:\Users\magic\AppData\Local\Microsoft\WindowsApps;C:\Users\magic\AppData\Roaming\Composer\vendor\bin;C:\Users\magic\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin;C:\Users\magic\AppData\Roaming\npm;C:\php
+$_ENV['PATHEXT'] => .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+$_ENV['PLINK_PROTOCOL'] => ssh
+$_ENV['PROCESSOR_ARCHITECTURE'] => AMD64
+$_ENV['PROCESSOR_IDENTIFIER'] => Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
+$_ENV['PROCESSOR_LEVEL'] => 6
+$_ENV['PROCESSOR_REVISION'] => 9702
+$_ENV['PROGRAMFILES'] => C:\Program Files
+$_ENV['PS1'] => \[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ 
+$_ENV['PSModulePath'] => C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+$_ENV['PUBLIC'] => C:\Users\Public
+$_ENV['PWD'] => C:/Users/magic/Code/Advent/2022
+$_ENV['ProgramData'] => C:\ProgramData
+$_ENV['ProgramFiles(x86)'] => C:\Program Files (x86)
+$_ENV['ProgramW6432'] => C:\Program Files
+$_ENV['SESSIONNAME'] => Console
+$_ENV['SHLVL'] => 1
+$_ENV['SYSTEMDRIVE'] => C:
+$_ENV['SYSTEMROOT'] => C:\WINDOWS
+$_ENV['TEMP'] => C:\Users\magic\AppData\Local\Temp
+$_ENV['TERM'] => cygwin
+$_ENV['TERM_PROGRAM'] => vscode
+$_ENV['TERM_PROGRAM_VERSION'] => 1.74.0
+$_ENV['TMP'] => C:\Users\magic\AppData\Local\Temp
+$_ENV['USERDOMAIN'] => JAY-PC
+$_ENV['USERDOMAIN_ROAMINGPROFILE'] => JAY-PC
+$_ENV['USERNAME'] => magic
+$_ENV['USERPROFILE'] => C:\Users\magic
+$_ENV['VBOX_MSI_INSTALL_PATH'] => C:\Program Files\Oracle\VirtualBox\
+$_ENV['VSCODE_GIT_ASKPASS_EXTRA_ARGS'] => --ms-enable-electron-run-as-node
+$_ENV['VSCODE_GIT_ASKPASS_MAIN'] => c:\Users\magic\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js
+$_ENV['VSCODE_GIT_ASKPASS_NODE'] => C:\Users\magic\AppData\Local\Programs\Microsoft VS Code\Code.exe
+$_ENV['VSCODE_GIT_IPC_HANDLE'] => \\.\pipe\vscode-git-d2154b9827-sock
+$_ENV['WINDIR'] => C:\WINDOWS
+$_ENV['ZES_ENABLE_SYSMAN'] => 1
+$_ENV['_'] => C:/php/php
+$_ENV['__COMPAT_LAYER'] => DetectorsAppHealth
+$_ENV['__PSLockDownPolicy'] => 0
+
+PHP License
+This program is free software; you can redistribute it and/or modify
+it under the terms of the PHP License as published by the PHP Group
+and included in the distribution in the file:  LICENSE
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+If you did not receive a copy of the PHP license, or have any
+questions about PHP licensing, please contact license@php.net.
