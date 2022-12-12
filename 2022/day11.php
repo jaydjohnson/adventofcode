@@ -12,11 +12,11 @@ for($i = 0; $i < count($lines); $i+=7) {
     array_shift($matches);
     $monkey_op = [ $matches[0][0], $matches[1][0] ];
     preg_match('/(\d+)/', $lines[$i+3], $matches);
-    $monkey_test = $matches[1];
+    $monkey_test = (int)$matches[1];
     preg_match('/(\d+)/', $lines[$i+4], $matches);
-    $monkey_true = $matches[1];
+    $monkey_true = (int)$matches[1];
     preg_match('/(\d+)/', $lines[$i+5], $matches);
-    $monkey_false = $matches[1];
+    $monkey_false = (int)$matches[1];
 
     $monkeys[$monkey_num] = [
         'items' => $monkey_items,
@@ -24,23 +24,31 @@ for($i = 0; $i < count($lines); $i+=7) {
         'test' => $monkey_test,
         'true' => $monkey_true,
         'false' => $monkey_false,
+        'inspected' => 0,
     ];
 }
 
 $round = 1;
-for($r=1; $r<2; $r++) {
+for($r=1; $r<=20; $r++) {
     foreach ($monkeys as $m => $monkey) {
-        foreach ($monkey['items'] as $item) {
+        foreach ($monkeys[$m]['items'] as $item) {
             $worry = worry_calc($monkey['op'], $item);
             $worry = (int)($worry/3);
+            $monkeys[$m]['inspected']++;
+            // echo "Monkey $m inspecting $item with $worry mod {$monkey['test']}\n";
             if ($worry%$monkey['test'] == 0) {
-                echo 'true' . PHP_EOL;
+                // echo "Monkey $m throwing $worry to " . $monkey['true'] . PHP_EOL;
+                array_push($monkeys[$monkey['true']]['items'], $worry);
             } else {
-                echo 'false' . PHP_EOL;
+                // echo "Monkey $m throwing $worry to " . $monkey['false'] . PHP_EOL;
+                array_push($monkeys[$monkey['false']]['items'], $worry);
             }
-            echo "Monkey $m inspecting $item with $worry mod {$monkey['test']}\n";
-            
         }
+        $monkeys[$m]['items'] = [];
+    }
+
+    foreach ($monkeys as $m=>$monkey) {
+        echo "Monkey $m: (" . $monkey['inspected'] . ") " . implode(", ", $monkey['items']) . PHP_EOL;
     }
 }
 
