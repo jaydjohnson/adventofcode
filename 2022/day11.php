@@ -28,12 +28,19 @@ for($i = 0; $i < count($lines); $i+=7) {
     ];
 }
 
+$mod = 1;
+foreach ($monkeys as $monkey) {
+    $mod *= ($monkey['test']);
+}
+echo $mod;
+
 $round = 1;
-for($r=1; $r<=20; $r++) {
+for ($r=1; $r<=10000; $r++) {
     foreach ($monkeys as $m => $monkey) {
         foreach ($monkeys[$m]['items'] as $item) {
             $worry = worry_calc($monkey['op'], $item);
-            $worry = (int)($worry/3);
+            $worry %= $mod;
+            // $worry = (int)($worry/3);
             $monkeys[$m]['inspected']++;
             // echo "Monkey $m inspecting $item with $worry mod {$monkey['test']}\n";
             if ($worry%$monkey['test'] == 0) {
