@@ -11,8 +11,5 @@ foreach ($lines as $y => $line) {
     if (strpos($line, 'E') !== false) {
         $e = [strpos($line, 'E'), $y];
     }
-    echo $line . PHP_EOL;
 }
 
-var_dump($s);
-var_dump($e);
