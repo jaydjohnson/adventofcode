@@ -1,8 +1,12 @@
 <?php
 
-$lines = explode(PHP_EOL, file_get_contents('day1.in'));
+include 'common.php';
+
+$lines = get_input(1, true);
 $sum   = 0;
 foreach ($lines as $y => $line) {
+	$first = 0;
+	$last = 0;
 	for ($x = 0; $x < strlen($line); $x++) {
 		$substr = substr($line, $x);
 		if (in_array($line[$x], ['1', '2', '3', '4', '5', '6', '7', '8', '9']) === true) {
