@@ -10,3 +10,12 @@ function get_input($day, $example = false) {
 function inbounds($row, $column, $width, $height) {
     return $row > 0 && $row < $width && $column > 0 && $column < $height;
 }
+
+function d($var) {
+    var_dump($var);
+}
+
+function dd($var) {
+    var_dump($var);
+    die();
+}
