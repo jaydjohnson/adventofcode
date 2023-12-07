@@ -10,7 +10,7 @@ function card_value($card) {
         'A' => 14,
         'K' => 13,
         'Q' => 12,
-        'J' => 11,
+        'J' => 1,
         'T' => 10,
         '9' => 9,
         '8' => 8,
@@ -35,6 +35,7 @@ function sort_hand($hand) {
     });
     return implode('', $hand_arr);
 }
+
 function get_type($hand) {
     $hand = sort_hand($hand);
     // check 5oak
@@ -65,22 +66,29 @@ function get_type($hand) {
     return 1; // high card
 }
 
+function get_wild_type($hand) {
+    if (str_contains($hand, 'J')) {
+        $highest = 0;
+        foreach ( ['A', 'K', 'Q', 'T', '9', '8', '7', '6', '5', '4', '3', '2'] as $wild) {
+            $new_hand = str_replace('J', $wild, $hand);
+            $type = get_type($new_hand);
+            if ($type > $highest) {
+                $highest = $type;
+            }
+        }
+        return $highest;
+    } else {
+        return get_type($hand);
+    }
+}
+
 foreach ($lines as $line) {
     [$hand, $bid] = explode(' ', $line);
-    // order hand
-    // $hand_arr = str_split($hand);
-    // usort( $hand_arr, function($a, $b) {
-    //     $va = lookup_card_value($a);
-    //     $vb = lookup_card_value($b);
-
-    //     return $va > $vb;
-    // });
-    // $hand = implode('', $hand_arr);
     $hands[] = [
         'hand' => $hand,
         'bid' => $bid,
         'place' => 0,
-        'type' => get_type($hand),
+        'type' => get_wild_type($hand),
     ];
 }
 
