@@ -2,33 +2,26 @@
 
 require 'common.php';
 
-$lines = get_input(11, true);
-
-$small_galaxy = [];
-foreach ($lines as $line) {
-    $small_galaxy[] = str_split($line);
-}
+$lines = get_input(11, false);
 
 $galaxy = [];
-// expand galaxy
-foreach ($small_galaxy as $row) {
-    if (count(array_unique($row)) === 1) {
-        $galaxy[] = $row;
-    }
-    $galaxy[] = $row;
+foreach ($lines as $line) {
+    $galaxy[] = str_split($line);
 }
 
-$colums = [];
+// expand galaxy
+$expanded_rows = [];
+foreach ($galaxy as $r => $row) {
+    if (count(array_unique($row)) === 1) {
+        $expanded_rows[] = $r;
+    }
+}
+
+$expanded_columns = [];
 for ($i = 0; $i < count($galaxy[0]); $i++) {
     if (count(array_unique(array_column($galaxy, $i))) === 1) {
         // found all .
-        $columns[] = $i;
-    }
-}
-
-for ($i = 0; $i < count($galaxy); $i++) {
-    foreach ($columns as $y => $column) {
-        array_splice($galaxy[$i], $column + $y, 0, ['.']);
+        $expanded_columns[] = $i;
     }
 }
 
@@ -45,9 +38,9 @@ foreach ($galaxy as $y => $row) {
     }
 }
 
+d($expanded_columns);
+$expand_factor = 999999;
 // find distances
-d($galaxies);
-
 $sum = 0;
 for ($i = 0; $i < count($galaxies); $i++) {
     for ($j = $i + 1; $j < count($galaxies); $j++) {
@@ -55,7 +48,17 @@ for ($i = 0; $i < count($galaxies); $i++) {
         $y1 = $galaxies[$i][0];
         $x2 = $galaxies[$j][1];
         $y2 = $galaxies[$j][0];
-        $distance = abs($x2-$x1) + abs($y2-$y1);
+        $distance = abs($x2 - $x1) + abs($y2 - $y1);
+        foreach ($expanded_rows as $row) {
+            if (! (($row < $y1 && $row < $y2) || ($row > $y1 && $row > $y2))) {
+                $distance += $expand_factor;
+            }
+        }
+        foreach ($expanded_columns as $col) {
+            if (! (($col < $x1 && $col < $x2) || ($col > $x1 && $col > $x2))) {
+                $distance += $expand_factor;
+            }
+        }
         $sum += $distance;
         echo 'distance between ' . $i + 1 . ' and ' . $j + 1 . ' : ' . $distance . PHP_EOL;
     }

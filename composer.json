@@ -1,0 +1,12 @@
+{
+    "name": "jaydjohnson/adventofcode",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Adventofcode\\": "/"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
+    }
+}
