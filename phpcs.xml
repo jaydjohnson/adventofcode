@@ -17,6 +17,7 @@
 
     <!-- Include the whole PEAR standard -->
     <rule ref="PSR12">
+        <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
         <!-- <exclude name="PEAR.NamingConventions.ValidFunctionName"/>
         <exclude name="PEAR.NamingConventions.ValidVariableName"/>
         <exclude name="PEAR.Commenting.ClassComment"/>
