@@ -1,0 +1,33 @@
+reg0, reg1, reg2, reg3, reg4, reg5
+#ip 4
+0: seti 123 0 3         reg3 = 123
+1: bani 3 456 3         reg3 = reg3 & 456
+2: eqri 3 72 3          reg3 = reg3 == 72  (either 1 or 0)
+3: addr 3 4 4           reg4 = reg3 + reg4  (goto 4 or 5)
+4: seti 0 0 4           reg4 = 0 (goto 1)
+5: seti 0 5 3           reg3 = 0
+6: bori 3 65536 5       reg5 = reg3 | 65536
+7: seti 5557974 2 3     reg3 = 5557974
+8: bani 5 255 2         reg2 = reg5 & 255
+9: addr 3 2 3           reg3 = reg3 + reg2
+10: bani 3 16777215 3   reg3 = reg3 & 16777215
+11: muli 3 65899 3      reg3 = reg3 * 65899
+12: bani 3 16777215 3   reg3 = reg3 & 16777215
+13: gtir 256 5 2        reg2 = 256 > reg5 (either 1 or 0)
+14: addr 2 4 4          reg4 = reg2 + reg4 (goto 15 or 16)
+15: addi 4 1 4          reg4 = reg4 + 1
+16: seti 27 9 4         reg4 = 27 (goto 27)
+17: seti 0 0 2          reg2 = 0
+18: addi 2 1 1          reg1 = reg2 + 1
+19: muli 1 256 1        reg1 = reg1 * 256
+20: gtrr 1 5 1          reg1 = reg1 > reg5 (either 1 or 0)
+21: addr 1 4 4          reg4 = reg1 + reg4
+22: addi 4 1 4          reg4 = reg4 + 1
+23: seti 25 4 4         reg4 = 25  (goto 26)
+24: addi 2 1 2          reg2 = reg2 + 1
+25: seti 17 6 4         reg4 = 17 (goto 18)
+26: setr 2 2 5          reg5 = reg2
+27: seti 7 1 4          reg4 = 7 (goto 8)
+28: eqrr 3 0 2          reg2 = reg3 == 0 (0 or 1)
+29: addr 2 4 4          reg4 = reg2 + reg4
+30: seti 5 7 4          reg4 = 5 (goto 6)
