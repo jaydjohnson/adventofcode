@@ -14,23 +14,12 @@ const WEST = 'west';
 const NORTH = 'north';
 const SOUTH = 'south';
 
+// y, x
 $adjacents     = [
-    [
-        0,
-        1,
-    ],
-    [
-        1,
-        0,
-    ],
-    [
-        0,
-        -1,
-    ],
-    [
-        -1,
-        0,
-    ],
+    'e' => [0,1],
+    's'  => [1,0],
+    'w' => [0,-1],
+    'n'  => [-1,0,]
 ];
 $adjacentdiags = [
     [
