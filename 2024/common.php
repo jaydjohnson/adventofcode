@@ -169,3 +169,11 @@ function vd($var, $simple = true)
     }
     die();
 }
+
+function board($board) {
+    echo PHP_EOL;
+    foreach($board as $line) {
+        echo $line . PHP_EOL;
+    }
+    echo PHP_EOL;
+}
