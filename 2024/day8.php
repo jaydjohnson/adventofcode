@@ -2,7 +2,7 @@
 
 include 'common.php';
 
-$lines = get_input(8, false);
+$lines = get_input(8, true);
 
 $count = 0;
 $board = [];
@@ -21,33 +21,66 @@ $locations = [];
 
 d($ants);
 board($board);
+$board2 = $board;
 foreach($ants as $ant) {
     v($ant);
     foreach ($ant as $i => $ant1) {
         for($j = $i+1; $j < count($ant); $j++) {
             $ant2 = $ant[$j];
-            $dy = abs($ant1[Y] - $ant2[Y]);
-            $dx = abs($ant1[X] - $ant2[X]);
+            $dy = $ant1[Y] - $ant2[Y];
+            $dx = $ant1[X] - $ant2[X];
             echo $dy . ', ' . $dx . PHP_EOL;
 
             // dir1
-            $ny = $ant1[Y] + ($ant1[Y] < $ant2[Y] ? -$dy : $dy);
-            $nx = $ant1[X] + ($ant1[X] < $ant2[X] ? -$dx : $dx);
-            if(inbounds($ny, $nx, strlen($board[0]), count($board))) {
-                if ($board[$ny][$nx] !== '#') {
+            if(inbounds($ant1[Y] + $dy, $ant1[X] + $dx, strlen($board[0]), count($board))) {
+                if ($board[$ant1[Y] + $dy][$ant1[X] + $dx] !== '#') {
                     $count++;
-                    $board[$ny][$nx] = '#';
+                    $board[$ant1[Y] + $dy][$ant1[X] + $dx] = '#';
                 }
             }
 
             // dir2
-            $ny = $ant2[Y] + ($ant1[Y] > $ant2[Y] ? -$dy : $dy);
-            $nx = $ant2[X] + ($ant1[X] > $ant2[X] ? -$dx : $dx);
-            if(inbounds($ny, $nx, strlen($board[0]), count($board))) {
-                if ($board[$ny][$nx] !== '#') {
+            if(inbounds($ant2[Y] - $dy, $ant2[X] - $dx, strlen($board[0]), count($board))) {
+                if ($board[$ant2[Y] - $dy][$ant2[X] - $dx] !== '#') {
                     $count++;
-                    $board[$ny][$nx] = '#';
+                    $board[$ant2[Y] - $dy][$ant2[X] - $dx] = '#';
                 }
+            }
+        }
+    }
+    board($board);
+}
+
+v($count);
+$count = 0;
+$board = $board2;
+foreach($ants as $ant) {
+    v($ant);
+    foreach ($ant as $i => $ant1) {
+        for($j = $i+1; $j < count($ant); $j++) {
+            $ant2 = $ant[$j];
+            $dy = $ant1[Y] - $ant2[Y];
+            $dx = $ant1[X] - $ant2[X];
+            echo $dy . ', ' . $dx . PHP_EOL;
+
+            // dir1
+            $pos = $ant1;
+            while(inbounds($pos[Y] + $dy, $pos[X] + $dx, strlen($board[0]), count($board))) {
+                if ($board[$pos[Y] + $dy][$pos[X] + $dx] !== '#') {
+                    $count++;
+                    $board[$pos[Y] + $dy][$pos[X] + $dx] = '#';
+                }
+                $pos = [Y => $pos[Y] + $dy, X => $pos[X] + $dx];
+            }
+
+            // dir2
+            $pos = $ant2;
+            while(inbounds($pos[Y] - $dy, $pos[X] - $dx, strlen($board[0]), count($board))) {
+                if ($board[$pos[Y] - $dy][$pos[X] - $dx] !== '#') {
+                    $count++;
+                    $board[$pos[Y] - $dy][$pos[X] - $dx] = '#';
+                }
+                $pos = [Y => $pos[Y] + $dy, X => $pos[X] + $dx];
             }
         }
     }

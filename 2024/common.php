@@ -13,6 +13,8 @@ const EAST = 'east';
 const WEST = 'west';
 const NORTH = 'north';
 const SOUTH = 'south';
+const X = 'x';
+const Y = 'y';
 
 // y, x
 $adjacents     = [
