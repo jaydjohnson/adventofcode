@@ -91,7 +91,7 @@ function get_input($day, $example = false)
 
 function inbounds($row, $column, $width, $height)
 {
-    return $row >= 0 && $row < $width && $column >= 0 && $column < $height;
+    return $row >= 0 && $row < $height && $column >= 0 && $column < $width;
 }
 
 /**
@@ -172,9 +172,16 @@ function vd($var, $simple = true)
     die();
 }
 
+function l($str) {
+    if (is_array($str)) {
+        $str = implode('', $str);
+    }
+    echo $str . PHP_EOL;
+}
+
 function board($board) {
     echo PHP_EOL;
-    foreach($board as $line) {
+    foreach ($board as $line) {
         echo $line . PHP_EOL;
     }
     echo PHP_EOL;
