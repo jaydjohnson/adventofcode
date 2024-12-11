@@ -172,9 +172,9 @@ function vd($var, $simple = true)
     die();
 }
 
-function l($str) {
+function l($str, $delimeter = '') {
     if (is_array($str)) {
-        $str = implode('', $str);
+        $str = implode($delimeter, $str);
     }
     echo $str . PHP_EOL;
 }
