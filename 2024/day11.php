@@ -7,13 +7,14 @@ $lines = get_input(11, false);
 $stones = explode(' ', $lines[0]);
 v($stones);
 
-for ($i=0; $i < 25; $i++) {
+for ($i = 0; $i < 25; $i++) {
     l($i . ' ' . count($stones));
     $stones = blink($stones);
     //l($stones, ' ');
 }
 v(count($stones));
 
+$cache = [];
 $stones = explode(' ', $lines[0]);
 $sum = 0;
 foreach ($stones as $stone) {
@@ -40,19 +41,24 @@ function blink($stones) {
 }
 
 function blinkr($stone, $blinks_left) {
+    global $cache;
+    $key = "$stone, $blinks_left";
+    if (isset($cache[$key])) {
+        return $cache[$key];
+    }
     if ($blinks_left == 0) {
         return 1;
     }
 
     if ($stone == 0) {
-        return blinkr(1, $blinks_left - 1);
+        return $cache[$key] = blinkr(1, $blinks_left - 1);
     }
     if (strlen($stone) % 2 == 0) {
             $parts = str_split($stone, strlen($stone) / 2);
             $left = blinkr($parts[0], $blinks_left - 1);
             $right = blinkr(strval(intval($parts[1])), $blinks_left - 1);
-            return $left + $right;
+            return $cache[$key] = $left + $right;
     }
 
-    return blinkr(strval(intval($stone) * 2024), $blinks_left - 1);
+    return $cache[$key] = blinkr(strval(intval($stone) * 2024), $blinks_left - 1);
 }
