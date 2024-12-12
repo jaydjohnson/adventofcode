@@ -182,7 +182,11 @@ function l($str, $delimeter = '') {
 function board($board) {
     echo PHP_EOL;
     foreach ($board as $line) {
-        echo $line . PHP_EOL;
+        if (is_array($line)) {
+            echo implode('', $line) . PHP_EOL;
+        } else {
+            echo $line . PHP_EOL;
+        }
     }
     echo PHP_EOL;
 }
