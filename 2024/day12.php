@@ -14,13 +14,18 @@ foreach ($lines as $y => $line) {
 // If letter not in specific direction add 1 to param
 // 
 board($plots);
+
+$checked = [];
+// [$checked, $area, $perim] = search([Y => 0, X => 0], 'A', $checked, 0, 0);
+// vd ($checked);
+
 $ori_plots = $plots;
 $price = 0;
 foreach($plots as $y => $plot) {
     for($x = 0; $x < count($plot); $x++) {
         $char = $plots[$y][$x];
-        if ($char !== '.') {
-            [$plots, $area, $perim] = search([Y => $y, X => $x], $char, $plots, 0, 0);
+        if (!in_array("$y,$x", $checked)) {
+            [$checked, $area, $perim] = search([Y => $y, X => $x], $char, $checked, 0, 0);
             l("char: $char\narea: $area\nperim: $perim");
             $price += $area * $perim;
         }
@@ -28,24 +33,25 @@ foreach($plots as $y => $plot) {
 }
 l("total: $price");
 
-function search($pos, $char, $plots, $area, $perim) {
-    // mark current spot as found
-    $plots[$pos[Y]][$pos[X]] = '.';
-    $area++;
+function search($pos, $char, $checked, $area, $perim) {
+    global $plots;
     global $adjacents;
+    // mark current spot as found
+    $checked[] = "{$pos[Y]},{$pos[X]}";
+    $area++;
     foreach($adjacents as $dir) {
-        if (inbounds($pos[Y] + $dir[0], $pos[X] + $dir[1], count($plots[0]), count($plots))) {
-            if ($plots[$pos[Y] + $dir[0]][$pos[X] + $dir[1]] === $char) {
+        $dy = $pos[Y] + $dir[0];
+        $dx = $pos[X] + $dir[1];
+        if (inbounds($dy, $dx, count($plots[0]), count($plots))) {
+            if (!in_array("$dy,$dx", $checked) && $plots[$dy][$dx] === $char) {
                 // continue searching in next plot
-                [$plots, $area, $perim] = search([Y => $pos[Y] + $dir[0], X => $pos[X] + $dir[1]], $char, $plots, $area, $perim);
-            } elseif ($plots[$pos[Y] + $dir[0]][$pos[X] + $dir[1]] !== '.') {
+                [$checked, $area, $perim] = search([Y => $dy, X => $dx], $char, $checked, $area, $perim);
+            } elseif ($plots[$dy][$dx] !== $char) {
                 $perim++;
             }
         } else {
             $perim++;
         }
     }
-    return [$plots, $area, $perim];
+    return [$checked, $area, $perim];
 }
-
-board($plots);
