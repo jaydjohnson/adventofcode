@@ -83,9 +83,13 @@ $opposites = [
     [[0, 1], [0, -1]],
 ];
 
-function get_input($day, $example = false)
+function get_input($day, $example = false, $group = false)
 {
-    return explode(PHP_EOL, file_get_contents('day' . $day . ($example ? '.ex' : '.in')));
+    $contents = file_get_contents('day' . $day . ($example ? '.ex' : '.in'));
+    if ($group) {
+        return explode(PHP_EOL . PHP_EOL, $contents);
+    }
+    return explode(PHP_EOL, $contents);
 }
 
 

@@ -2,7 +2,7 @@
 
 require 'common.php';
 
-$lines = get_input(17, false);
+$lines = get_input(17, true);
 
 $map = [];
 $start = [];
@@ -29,17 +29,18 @@ foreach ($lines as $y => $line) {
 // $program = [4, 0];
 
 for ($i = 0; $i < count($program); $i++) {
-    l("starting $i");
+    l("starting $i - {$program[$i]} with param: {$program[$i + 1]}");
     v($registers);
     if ($program[$i] == '3') {
         if ($registers['A'] != '0') {
             l("jumping to {$program[$i + 1]}");
-            $i = -1;
+            $i = $program[$i + 1] - 1;
             continue;
         }
+    } else {
+        l("running opcode: {$program[$i]} with param: {$program[$i + 1]}");
+        eval_prog($program[$i], $program[$i + 1]);
     }
-    l("running opcode: {$program[$i]} with param: {$program[$i + 1]}");
-    eval_prog($program[$i], $program[$i + 1]);
     $i++;
 }
 d($registers);
@@ -50,32 +51,31 @@ function eval_prog($op, $param) {
     switch ($op) { 
         case '0':
             $power = get_combo_op($param);
-            $registers['A'] = (int) $registers['A'] / pow(2, $power);
+            $registers['A'] = (int) floor($registers['A'] / pow(2, $power));
             break;
         case '1':
             // Bitwise Operator
-            $registers['B'] = $registers['B'] ^ $param;
+            $registers['B'] = (int) floor($registers['B'] ^ $param);
             break;
         case '2':
-            l('opcode 2');
             $val = get_combo_op($param);
-            $registers['B'] = (int) $val % 8;
+            $registers['B'] = (int) floor($val % 8);
             break;
         case '4':
-            $registers['B'] = (int) $registers['B'] ^ (int) $registers['C'];
+            $registers['B'] = (int) floor($registers['B'] ^ $registers['C']);
             break;
         case '5':
             $num = get_combo_op($param);
-            $val = (int) $num % 8;
+            $val = (int) floor($num % 8);
             $output[] = $val;
             break;
         case '6':
-            $denom = get_combo_op($param);
-            $registers['B'] = (int) $registers['A'] / $denom;
+            $power = get_combo_op($param);
+            $registers['B'] = (int) floor($registers['A'] / pow(2, $power));
             break;
         case '7':
-            $denom = get_combo_op($param);
-            $registers['C'] = (int) $registers['A'] / $denom;
+            $power = get_combo_op($param);
+            $registers['C'] = (int) floor($registers['A'] / pow(2, $power));
             break;    
         default:
             break;
@@ -99,8 +99,12 @@ function get_combo_op($param) {
             exit();
             break;
         default:
-            $value = $param;
+            $value = (int) $param;
             break;
     }
     return $value;
 }
+
+
+// Wrong:
+// 7,3,3,5,5,1,6,5,7
